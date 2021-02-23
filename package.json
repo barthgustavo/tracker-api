@@ -1,0 +1,24 @@
+{
+  "name": "tracker",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "build": "webpack"
+  },
+  "author": "Gustavo Barth",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/busboy": "^0.2.3",
+    "@types/express": "^4.17.11",
+    "ts-loader": "^8.0.17",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.5",
+    "webpack": "^5.24.0",
+    "webpack-cli": "^4.5.0"
+  }
+}
