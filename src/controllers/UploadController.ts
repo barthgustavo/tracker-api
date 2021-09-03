@@ -4,11 +4,10 @@ import { pipelineAsync } from '../util';
 
 class UploadController {
     async upload(req: Request, res: Response) {
-
         const uploadHandler = new UploadHandler();
 
         const onFinish = (res: Response) => () => {
-            res.json({ result: 'OK'});
+            res.json({ result: 'OK', filename: uploadHandler.newFileName });
         }
 
         const handlerInstance = uploadHandler.registerEvents(req.headers, onFinish(res));
