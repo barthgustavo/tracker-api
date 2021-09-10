@@ -18,7 +18,7 @@ class UploadHandler {
     private async onFile(fieldname: string, file: NodeJS.ReadableStream, filename: string, encoding: string, mimetype: string) {
         const d = new Date();
         this.newFileName = Buffer.from((Math.random() * d.getMilliseconds()).toString()).toString('base64') + path.extname(filename);
-        let saveFileTo = join(__dirname, 'uploads', this.newFileName);
+        let saveFileTo = join(__dirname, '../../uploads', this.newFileName);
         
         await pipelineAsync(file, this.handleData.apply(this), createWriteStream(saveFileTo));
     }

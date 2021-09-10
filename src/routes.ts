@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
     res.send('API OK');
 });
 
-router.post('/', uploadController.upload);
+router.post('/upload', uploadController.upload);
+router.post('/process', (req, res) => {
+    console.log(req.body);
+    res.send('ok');
+});
 
 export { router };
